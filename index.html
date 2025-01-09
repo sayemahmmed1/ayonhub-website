@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyonHub - Your Journey to Relaxation & Growth</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AyonHub</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in">
+            <h1>Transform Your Journey to Wellness</h1>
+            <p>Experience the perfect blend of relaxation and personal growth at AyonHub</p>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid stagger-animation">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="images/massage.jpg" alt="Body Massage">
+                </div>
+                <div class="service-content">
+                    <h3>Body Massage</h3>
+                    <p>Discover deep relaxation with our signature massage treatments.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="images/relaxation.jpg" alt="Premium Relaxation">
+                </div>
+                <div class="service-content">
+                    <h3>Premium Relaxation</h3>
+                    <p>Immerse yourself in luxury with our premium spa experiences.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="images/star-program.jpg" alt="Star Program">
+                </div>
+                <div class="service-content">
+                    <h3>Star Program</h3>
+                    <p>Elevate your wellness journey with our exclusive membership program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info animate-slide-up">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you. Reach out for any questions.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Adabor 17, Shaheb Bari, Dhaka</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+8801723632517</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@ayonhub.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form animate-slide-up">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>AyonHub</h3>
+                <p>Your destination for relaxation and personal growth.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AyonHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // GSAP animations for index page
+        gsap.utils.toArray('.animate-fade-in').forEach((element) => {
+            gsap.from(element, {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                },
+            });
+        });
+
+        gsap.utils.toArray('.animate-slide-up').forEach((element) => {
+            gsap.from(element, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 85%',
+                },
+            });
+        });
+
+        gsap.utils.toArray('.stagger-animation').forEach((container) => {
+            const elements = container.querySelectorAll('.service-card');
+            gsap.from(elements, {
+                opacity: 0,
+                y: 30,
+                stagger: 0.2,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top 80%',
+                },
+            });
+        });
+    </script>
+</body>
+</html>
